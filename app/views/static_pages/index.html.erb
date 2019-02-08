@@ -25,14 +25,15 @@
 
   <div class="card-columns border-info container">
   <% @gossip.each do |i| %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-header"><h5 class="card-title"><%= i.title %> <span class="badge badge-secondary">
+
+<div class="card text-white bg-primary mb-3" style="width: 18rem;">
+  <div class="card-header"><%= i.title %> <span class="badge badge-secondary">
       <i class="fas fa-comments"></i> <%= i.comments.count %></span></h5>
       </div>
-      <div class="card-body">
-        <h6 class="card-subtitle mb-2 text-muted"><%= i.user.first_name %></h6>
-        <%= link_to "Go Potin", gossip_path(i.id),:class => "btn-info btn p-1"%>
-      </div>
-    </div>
+  <div class="card-body">
+    <h4 class="card-title"><%= i.user.first_name %></h4>
+        <%= link_to "Voir Gossip", gossip_path(i.id),:class => "btn-secondary btn p-1"%>
+        </div>
+  </div>
   <% end %>
 </div>
