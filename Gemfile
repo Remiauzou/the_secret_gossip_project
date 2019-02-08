@@ -24,7 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'table_print'
 gem 'bcrypt'
-gem 'faker'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

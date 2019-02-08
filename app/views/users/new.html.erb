@@ -1,0 +1,22 @@
+<div class="card border-info m-5">
+ <div class="card-header">
+  <h1>Créer un compte</h1>
+  </div>
+  <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+    <div class="card-body text-info">
+      <div class="form-group">
+        <%= text_field_tag 'first_name', '', class: "form-control", placeholder: "Ton Prénom" %>
+        <%= text_field_tag 'last_name', '', class: "form-control", placeholder: "Ton Nom" %>
+        <%= text_field_tag 'description', '', class: "form-control", placeholder: "Une Description ?" %>
+        <%= text_field_tag 'age', '', class: "form-control", placeholder: "Ton Âge" %>
+        <%= text_field_tag 'email', '', class: "form-control", placeholder: "Ton Email" %>
+        <%= password_field_tag 'password', '', class: "form-control", placeholder: "Choisis un Mot de passe" %>
+        <br /> <br />
+        <%= submit_tag "INSCRIPTION", class: "btn btn-info" %>
+      <p class="mt-4">Déjà un compte ? <%= link_to "SE CONNECTER", new_session_path %>
+      </div>
+    </div>
+  <% end %>
+
+</div>
